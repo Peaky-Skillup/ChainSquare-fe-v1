@@ -2,11 +2,13 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Test } from 'components/Test';
-import styles from '../styles/Home.module.css';
-
 import { Typography, TypographyAnchor } from 'components/Common';
+import styles from '../styles/Home.module.css';
+import { useTheme } from 'styled-components';
 
 const Home: NextPage = () => {
+	const theme = useTheme();
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -21,7 +23,7 @@ const Home: NextPage = () => {
 					Welcome to <a href='https://nextjs.org'>Next.js!</a>
 				</h1>
 
-				<Typography variant={'display2'} color={'#aa1177'}>
+				<Typography variant={'display2'} color={theme.color.aqua}>
 					Welcome to{' '}
 					<TypographyAnchor href='https://nextjs.org'>
 						Next.js!

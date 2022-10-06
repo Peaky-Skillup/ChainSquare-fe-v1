@@ -3,6 +3,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Test } from 'components/Test';
 import styles from '../styles/Home.module.css';
+
+import { Typography, TypographyAnchor } from 'components/Common';
+
 const Home: NextPage = () => {
 	return (
 		<div className={styles.container}>
@@ -17,6 +20,13 @@ const Home: NextPage = () => {
 				<h1 className={styles.title}>
 					Welcome to <a href='https://nextjs.org'>Next.js!</a>
 				</h1>
+
+				<Typography variant={'display2'} color={'#aa1177'}>
+					Welcome to{' '}
+					<TypographyAnchor href='https://nextjs.org'>
+						Next.js!
+					</TypographyAnchor>
+				</Typography>
 
 				<p className={styles.description}>
 					Get started by editing{' '}

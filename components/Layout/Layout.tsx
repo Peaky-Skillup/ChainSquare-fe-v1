@@ -7,9 +7,9 @@ interface ILayoutProps {
 
 const Layout = ({ children }: ILayoutProps) => {
   return (
-    <div style={{ display: "flex" }}>
-      <SideBar position="left" />
-      {children}
+    <div style={{ display: "flex", flexDirection: "row" }}>
+      {children} {/* main */}
+      <SideBar position="right" />
     </div>
   );
 };

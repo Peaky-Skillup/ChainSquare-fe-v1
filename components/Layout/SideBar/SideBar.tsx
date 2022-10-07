@@ -8,17 +8,18 @@ export const SIDE_BAR_POSITION_ENUM = {
 };
 
 export type SideBarPositionType = keyof typeof SIDE_BAR_POSITION_ENUM;
+
 //Interfaces
 export interface SideBarProps {
   position: SideBarPositionType;
   width?: string;
 }
 
-export const Page = styled.div`
+const Page = styled.div`
   width: ${(props: SideBarProps) => props.width};
 `;
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -26,7 +27,7 @@ export const Wrapper = styled.div`
   top: 0px;
 `;
 
-export const Bar = styled.div`
+const Bar = styled.div`
   position: fixed;
   ${(props: SideBarProps) => SIDE_BAR_POSITION_ENUM[props.position]};
   width: ${(props: SideBarProps) => props.width};
